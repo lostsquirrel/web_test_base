@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>DHTML</title>
+	<script type="text/javascript" src="../jquery-1.10.2.js"></script>
+	<script type="text/javascript">
+		
+	</script>
+	<style type="text/css">
+		.xx {
+			border: solid 1px red; 
+		}
+	</style>
+</head>
+<body>
+<div id="d1">
+	<h3>haha</h3>
+</div>
+	<a href="javascript:void(0)">1111111</a>
+	<a href="javascript:void(0)">222222</a>
+	<a href="javascript:void(0)">333333</a>
+	<a href="javascript:void(0)">444444</a>
+
+	<button>unbind</button>
+</body>
+	<script type="text/javascript">
+		$('a').click(function () {
+			// body...
+			$(this).addClass('xx');
+			// if ($(this).hasClass('xx')) {
+			// 	$(this).removeClass('xx');
+			// }
+		});
+		$('button').click(function(){
+			$('a').off('click');
+		});
+	</script>
+</html>

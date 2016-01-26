@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery start</title>
+</head>
+<script type="text/javascript" src="../../js/jquery-1.10.1.js"></script>
+
+<body>
+
+</body>
+<script type="text/javascript">
+for (var i = 10; i >= 0; i--) {
+    $('body').append("<p style='backgroud-color:blue; border:1px solid black'>"+i*99999+"</p>")
+}
+$(document).ready(function() {
+    $("p").click(function() {
+        $(this).hide();
+    });
+    $('div').click(function () {
+      // body...
+      $('div').effect('explode')
+    })
+    $('#car').draggable()
+    $('div')..resizable()
+    $('ol').selectable()
+});
+</script>
+
+</html>

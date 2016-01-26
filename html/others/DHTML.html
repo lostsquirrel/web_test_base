@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>DHTML</title>
+	<script type="text/javascript">
+	var b = true;
+	function show () {
+		var obj = document.getElementById('d1');
+		// alert(obj.tagName);
+		// obj.innerText = "kkkkkk";
+		// alert(obj.innerText);
+		if(b) {
+			obj.className = "font1";
+			b = false;
+		} else {
+			obj.className = "font2";
+			b = true;
+		}
+	}
+	var ranNum = parseInt(Math.random()*100+1);
+	function guess() {
+		var num = document.getElementById("text").value;
+		
+		if (num > ranNum) {
+			alert("大了");
+		} else if (num < ranNum){
+			alert("小了");
+		} else {
+			alert("got it");
+		}
+	}
+	</script>
+	<style type="text/css">
+	.font1 {
+		color: blue;
+	}
+	.font2 {
+		color: red;
+	}
+	</style>
+</head>
+<body>
+	<input type="button" value="guess" onclick="guess()"/>
+	<input id="text" />
+<div id="d1">
+	<h3>haha</h3></div>
+</body>
+</html>

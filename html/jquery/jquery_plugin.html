@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>DHTML</title>
+	<script type="text/javascript" src="../jquery-1.10.2.js"></script>
+	<script type="text/javascript">
+		$.fn.greenify = function() {
+		    this.css( "color", "green" );
+		};
+		$.fn.greent = function (word) {
+			alert(word)
+		}
+	</script>
+</head>
+<body>
+<div id="d1">
+	<h3>haha</h3>
+</div>
+	<a href="">1111111</a><a href="">222222</a><a href="">333333</a><a href="">444444</a>
+</body>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		// alert('hello');
+		$( "a" ).greenify();
+		$("h3").greent('xxxxxxxxxxx');
+	});
+	</script>
+</html>

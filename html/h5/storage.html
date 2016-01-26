@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Storage</title>
+	</head>
+	<body>
+		<section class="display" id="d1">
+			<p id="result"></p>
+		</section>
+	</body>
+	<script type="text/javascript">
+		var d1 = document.getElementById("d1");
+		if(typeof(Storage)!=="undefined")
+		{
+			d1.appendChild(document.createTextNode('Yes! localStorage and sessionStorage support!'))
+		// Some code.....
+			localStorage.lastname="Smith";
+			document.getElementById("result").innerHTML="Last name: " + localStorage.lastname;
+		}
+		else
+		{
+			d1.innerHTML='Sorry! No web storage support..'
+		}
+	</script>
+</html>

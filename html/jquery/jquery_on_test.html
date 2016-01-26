@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>DHTML</title>
+	<script type="text/javascript" src="../../js/jquery-1.10.2.js"></script>
+</head>
+<body>
+<div id="d1">
+	<h3>haha</h3>
+</div>
+	<a href="#">111111</a>
+    <a href="#">222222</a>
+    <a href="#">333333</a>
+    <a href="#">444444</a>
+</body>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		// // alert('hello');
+		// $( "body" ).on('click','a',  function (e) {
+		//     // body...
+        //     for (i = 0; i < arguments.length; i++) {
+        //        console.log(arguments[i])
+        //    }
+        //     e.preventDefault();
+        //     $(this).html($(this).html()+$(this).html());
+		// });
+        $('a').on('click',  function (e) {
+		    // body...
+            for (i = 0; i < arguments.length; i++) {
+               console.log(arguments[i])
+           }
+            e.preventDefault();
+            $(this).html($(this).html()+$(this).html());
+		});
+
+	});
+    window.setTimeout(function function_name(argument) {
+        // body...
+        var content = ''
+        for (var i = 0; i < 5; i++) {
+            content += '<a href="#">'+i+'</a> \n';
+        }
+        $('body').append(content)
+    }, 500);
+
+    </script>
+</html>

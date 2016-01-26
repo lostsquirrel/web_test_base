@@ -1,0 +1,118 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src ="file:///D:\workspace2.0\static-resource\src\js\plugin\jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src ="file:///D:\workspace2.0\static-resource\src\js\plugin\jquery-ui-1.9.2.custom.min.js"></script>
+	<style type="text/css">
+		/*.dfr_search .sub,.dfr_search .sub:hover { background-image:url(file:///D:\workspace2.0\static-resource\src\img\sale_admin\icons.png); background-repeat:no-repeat;}
+		.dfr_search { height:22px; width:128px; background:#FFF; border:#9a9a9a 1px solid; position:relative;text-align:left; display:inline-block; margin-right:10px;}
+		.dfr_search .text { background:none; border:0px; width:96px; height:22px; line-height:22px; margin:0px; padding:0px; padding-left:4px; vertical-align:middle; color:#666;}
+		.dfr_search .sub { background-position:-293px 0; width:22px; height:22px; border:0px; padding:0px; margin:0px; vertical-align:middle;}
+		.dfr_search .sub:hover { cursor:pointer; background-position:-315px 0;}*/
+	</style>
+	<script type="text/javascript">
+		/*jQ(function(){
+			var selfURL = jQ("#selfURL").val();
+			var URL = jQ("#url").val();
+			
+			jQ("#searchBth").click(function(){
+				var query = jQ("#search").val();
+				URL = selfURL + URL + query;
+				window.location.href =  URL;
+				
+			});
+			//重置
+			jQ("#reset").click(function(){
+				title = jQ("#search").val('');
+			});
+		});
+		jQ.extend({
+	
+	Brand : {
+		
+		requestContext : "",
+		
+		init : function(context, input) {
+			jQ.Brand.requestContext = context;
+			jQ.Brand.autocomplete(input);
+		},
+		
+		autocomplete : function(input) {
+			jQ("#" + input).outletFormBean({
+			      source: function(req, resp) {
+			          jQ.ajax({
+			              url: jQ.Brand.requestContext + "/ajax/brands.json",
+			              data: {
+			            	  prefix: jQ("#" + input).val()
+			              },
+			              success: function(response) {
+			            	  var data = response.data;
+			            	  resp(jQ.map(data.data, function(item) {
+			            		  return {
+			            			  label: item.name,
+			            			  value: item.id
+			                      };
+			                  }));
+			              }
+			          });
+			      },
+			      
+			      minLength: 1,
+			      
+			      select: function(event, ui) {
+			    	  this.value = ui.item.label;
+			    	  jQ("#brandId").val(ui.item.value);
+			    	  return false;
+			      },
+			      
+			      open: function(event, ui) {
+			    	  jQ(this).removeClass("ui-corner-all").addClass("ui-corner-top");
+			      },
+			      
+			      close: function(event, ui) {
+			    	  jQ(this).removeClass("ui-corner-top").addClass("ui-corner-all");
+			      }
+		    });
+		}
+		
+	}
+	
+});*/
+	</script>
+	<script type="text/javascript">
+var move = function(item) {
+	console.log(jQ(item).closest('select').attr('id'));
+	if (jQ(item).closest('select').attr('id') == 'select1') {
+		jQ(item).appendTo(jQ('#select2'));
+	} else if(jQ(item).closest('select').attr('id') == 'select2'){
+		jQ(item).appendTo(jQ('#select1'));
+	};
+};			
+		
+
+	</script>
+</head>
+<body>
+	<select id="select1" multiple="multiple" size="5">
+		<option onClick="move(this)">o1</option>
+		<option onClick="move(this)">o2</option>
+		<option onClick="move(this)">o3</option>
+		<option onClick="move(this)">o4</option>
+
+	</select>
+	<select id="select2" multiple="multiple" size="5"></select>
+
+	
+<!--<img src="file:///D:\workspace2.0\static-resource\src\js\plugin\close.png">
+	<div class="dfr_search">
+	   	<input type="text" class="text"  name="title"  id="search"  value="" />
+	    <input type="hidden" id="url" value="/brand/brand_list?name="/>
+	    <input type="button" class="sub" id="searchBth" />
+	</div>
+	<a href="javascript:void(0);" id="reset">重置</a>
+<script type="text/javascript">
+var context = "http://localhost:8081/outlet-manager-web/"
+jQ.Brand.init(context, 'search');
+</script>-->
+</body>
+</html>

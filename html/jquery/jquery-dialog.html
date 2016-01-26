@@ -1,0 +1,120 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Survey Test</title>
+<style type="text/css" media="screen">
+body {background-color: #efefef;font-family: "Trebuchet MS",sans-serif;font-size: 16px;}
+h1,h2,p {padding: 5px;}
+h1,h2{font-size: 18px; color: #666666;}
+.container {width: 50%;margin-left: 25%;margin-top:2%;background: #ffffff;border: 4px solid #cccccc;}
+#survey,#survey_thanks{font-size:80%}
+p#surveyDenied{text-align:right;color: #cc0202;margin: 0;padding:0;}
+p#surveyDenied a{color:#cc0202;}
+div#error_message{font-weight:bold;color: #FF0000}
+
+div.progress-container {
+  border: 1px solid #ccc; 
+  width: 150px; 
+  padding: 1px; 
+  margin-bottom: 5px;
+  background: white;
+}	
+
+div.progress-container > div {
+  height: 12px;
+  margin-bottom: 2px;
+}
+div.progress-container > div.pink { 
+  background-color:#CC6699; 
+}
+div.progress-container > div.blue { 
+  background-color: #3366CC; 
+}
+div.progress-container > div.soccer { 
+  background-color: #006633; 
+}
+div.progress-container > div.futbol { 
+  background-color: #663333; 
+}
+</style>
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+
+<script language="javascript" type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script language="javascript" type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script language="javascript" type="text/javascript">
+$().ready( function () {
+	console.log("----------");
+	$(function(){  
+			$('#survey').dialog({
+				bgiframe: true,
+				autoOpen: false,
+				modal: true,
+				width: 500,
+				resizable: false,
+				buttons: {
+					Submit: function(){
+						console.log("Submit");
+					}
+				}
+			});
+		});
+		
+
+	$( "#opener" ).click(function() {
+      $( "#survey" ).dialog( "open" );
+    });
+	
+	$('p#surveyDenied a').click(function() {
+		setCookie('POPsurvey','POPsurvey',30);
+		//ajax to count denials??
+		$('#survey').dialog('close');
+	});
+	
+	
+	
+	
+
+});
+
+
+
+
+
+</script>
+<script type="text/javascript">
+
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>Survey Test page</h1>
+
+<p>Pop-up survey opens on page load. After answering the survey or clicking on "No, Thanks", the browser is cookied to prevent the survey from loading up on a return visit.</p>
+<p>Survey "Thank You" page displays results in graph format.</p>
+<p>Try it out by taking the survey or clicking on "No, Thanks" then refreshing the page.</p>
+
+<button id="opener">Open Dialog</button>
+
+<div id="survey" title="Pop-Up Survey">
+	<p id="surveyDenied"><a href="#">No, thanks</a></p>
+		<p>Pop-up survey that cookies browser on completion or on opt-out. Short 411 demo survey.</p>
+		<form id="popup_survey" name="popup_survey" method="post">
+        <p><strong>Pink or blue?</strong><br />
+		<input id="pink" type="radio" name="radio_color" value="pink"  />Pink<br />
+        <input id="blue" type="radio" name="radio_color" value="blue"  />Blue</p>
+        <p><strong>Soccer or futbol?</strong><br />
+		<input id="soccer" type="radio" name="radio_sport" value="soccer"  />Soccer<br />
+        <input id="futbol" type="radio" name="radio_sport" value="futbol"  />Futbol</p>
+        </form>
+	<div id="error_message"></div>
+</div>
+
+
+
+</div>
+</body>
+</html>

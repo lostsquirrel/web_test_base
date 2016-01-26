@@ -1,0 +1,6 @@
+.tc_bg { width:100%; height:100%; position:fixed; z-index:20000; background:url(../../../img/wap_wifi/black_alpha70.png) left 
+top repeat;}
+.tc_content { position: fixed; width: 100%; z-index: 20020; padding-top:80px;}
+.tc_content .nr {background:#FFF; border:#999 5px solid; padding:10px; width:80%; margin:0 auto 0;}
+.tc_content .nr_in { padding:10px; height:240px; overflow-y:scroll; overflow-x:hidden; font-size:12px; }
+.tc_content .nr_in .t1 { font-size:16px; color: #000; font-weight:bold;}

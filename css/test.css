@@ -1,0 +1,65 @@
+@charset "utf-8";
+/*
+选择器:
+html选择器
+claa选择器
+id选择器:一个页面需要有惟一的id,也可以被javascript使用;
+css滤镜: 其实通过一些代码完成丰富了样式;
+*/
+p {
+	background-color: #FF0000;
+	color: #0099FF;
+}
+div {
+	background-color: red;
+	color: #FFFFFF;
+}
+span{
+	background-color: #CC9966;
+	color: pink;
+}
+.grbg{
+	background-color: green;
+}
+#d2{
+	color: red;
+}
+div b {
+	/*关联选择器*/
+	background-color: white;
+	color: green;
+}
+h1,h2,h3 {
+	/*组合选择器*/
+	color: red;
+}
+/*伪元素选择器 div也可以添加*/
+a:link {
+	background-color: #0099FF;
+	color: #FF0000;
+	font-size: 18px;
+}
+a:hover{
+	background-color: #000000;
+	color: #FFFFFF;
+	font-size: 36px;
+}
+a:visited{
+	background-color: #FF0000;
+	color: #FFFF00;
+	font-size: 9px;	
+}
+a:active{
+	background-color: #666699;
+	color: #FF3366;
+	font-size: 24px;
+}
+input:focus{
+	background-color: pink;
+}
+p:first-letter{
+	font-size: 30px;
+}
+p:first-line{
+	font-size: 25px;
+}

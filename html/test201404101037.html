@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>搜啦购 - 商家后台</title>
+    <link href="http://localhost/static-resource/css/global.css" rel="stylesheet" type="text/css" />
+    <link href="http://localhost/static-resource/css/outlet_manager/quote/grid.css" rel="stylesheet" type="text/css" />
+    <link href="http://localhost/static-resource/css/web-im/sale-ui-dialogBox.css" rel="stylesheet" type="text/css" />
+    <link href="http://localhost/static-resource/css/plugin/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" type="text/css" />
+    <link href="http://localhost/static-resource/css/plugin/TogglePanels.css" rel="stylesheet" type="text/css" />
+
+    <link href="http://localhost/static-resource/css/outlet_manager/alone/over_view.css" rel="stylesheet" type="text/css" />
+    <link href="http://localhost/static-resource/css/outlet_manager/alone/settled03.css" rel="stylesheet" type="text/css" />
+
+
+    <script type="text/javascript" src="http://localhost/static-resource/js/base/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="http://localhost/static-resource/js/plugin/jquery-ui-1.9.2.custom.min.js"></script>
+    <script type="text/javascript" src="http://localhost/static-resource/js/plugin/underscore-min.js"></script>
+    <script type="text/javascript" src="http://localhost/static-resource/js/plugin/TogglePanels.js"></script>
+
+    <script type="text/javascript" src="http://localhost/static-resource/js/backend_manager/alone/addPrefix.js">
+    </script>
+
+    <title>搜啦购 - 商家后台</title>
+</head>
+
+<body id="template">
+    <div id="Header">
+        <div id="header">
+            <div style="margin-left:12px; margin-right:20px;">
+
+
+                <div class="dfr" style="line-height:56px;">
+                    <span class="w1">你好，</span>
+                    <span class="b2 txs14 txw1 mgr30">shop0217</span>
+                    <span>
+                    
+                    <a href="/outlet-manager-web/j_spring_security_logout" class="txd1 w1 mgr20">安全退出</a>
+                </span>
+                </div>
+
+                <div>
+                    <a href="http://localhost/www-server-web">
+                        <img src="http://localhost/static-resource/img/outlet_manager/adminhlogo.png" />
+                    </a>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <div id="L_col">
+        <div id="accordion" class="ui-accordion">
+            <input id="backHomeBtn" class="index_b" type="button" value="后台管理首页" />
+            <h3 class="menu_title01 ui-accordion-header ui-corner-top ui-corner-bottom">
+        <div class="menu_title_div">
+            <a href="#">店铺设置与管理</a>
+        </div>
+    </h3>
+            <ul class="menu_list01 ui-accordion-content ui-corner-bottom">
+                <li id="background_home" style="display: none;"><a href="#" />">商户后台首页</a>
+                </li>
+                <li id="admin_info"><a href="/outlet-manager-web/outlet/info">基本信息</a>
+                </li>
+                <li id="shopset"><a href="/outlet-manager-web/outlet/setting">店铺设置</a>
+                </li>
+                <!--
+        <li><a href="">物流设置</a></li>
+        <li><a href="">投诉管理</a></li>
+        -->
+            </ul>
+
+            <h3 class="menu_title02 ui-accordion-header ui-corner-top ui-corner-bottom">
+            <div class="menu_title_div">
+                <a href="#">特卖会电商管理</a>
+            </div>
+        </h3>
+            <ul class="menu_list02 ui-accordion-content ui-corner-bottom">
+                <!-- 
+            <li id="commodity_item_0"><a href="/outlet-manager-web/commodity/category/list.html" >发布商品</a></li>
+            <li id="commodity_item_1"><a href="/outlet-manager-web/commodity/list.html?commodityType=GENERAL&commodityActive=ADD&page=1&pageSize=10">正价商品</a></li>
+            <li id="commodity_item_2"><a href="/outlet-manager-web/commodity/list.html?commodityType=SALE&commodityActive=ADD&page=1&pageSize=10">折扣商品</a></li>
+            <li id="commodity_item_3"><a href="/outlet-manager-web/commodity/list.html?commodityType=CLEAR&commodityActive=ADD&page=1&pageSize=10">清仓商品</a></li>
+             -->
+                <li id="commodity_special_item_0"><a href="/outlet-manager-web/commodity/special/category/list.html">发布商品</a>
+                </li>
+                <li id="commodity_special_item_1"><a href="/outlet-manager-web/commodity/special/list.html?commodityType=SPECIAL&commodityActive=ADD&page=1&pageSize=10">商品管理</a>
+                </li>
+
+            </ul>
+
+
+
+            <h3 class="menu_title03 ui-accordion-header ui-corner-top ui-corner-bottom">
+        <div class="menu_title_div">
+            <a href="#">优惠劵发布与管理</a>
+        </div>
+    </h3>
+            <ul class="menu_list03 ui-accordion-content ui-corner-bottom">
+                <li id="commodity_ticket_item_0"><a href="/outlet-manager-web/commodity/ticket/list.html">优惠券管理</a>
+                </li>
+                <li id="commodity_ticket_item_4"><a href="/outlet-manager-web/commodity/ticket/manage/list.html">优惠券消费码管理</a>
+                </li>
+            </ul>
+            <h3 class="menu_title04 ui-accordion-header ui-corner-top ui-corner-bottom">
+        <div class="menu_title_div">
+            <a href="#">信息发布与管理</a>
+        </div>
+    </h3>
+            <ul class="menu_list04 ui-accordion-content ui-corner-bottom">
+                <li id="news"><a href="/outlet-manager-web/news/list">新闻动态</a>
+                </li>
+                <li id="activity"><a href="/outlet-manager-web/activity/list">促销活动</a>
+                </li>
+                <li id="micro_commodity"><a href="/outlet-manager-web/outlet/microCommodity/list">热卖商品</a>
+                </li>
+                <li id="dm_sheet"><a href="/outlet-manager-web/outlet/dmSheet/list">DM单</a>
+                </li>
+            </ul>
+
+
+            <h3 class="menu_title07 ui-accordion-header ui-corner-top ui-corner-bottom">
+            <div class="menu_title_div">
+                <a href="#">订单管理</a>
+            </div>
+        </h3>
+            <ul class="menu_list07 ui-accordion-content ui-corner-bottom">
+                <li id="commodity_special_item_2"><a href="/outlet-manager-web/orders">订单管理</a>
+                </li>
+            </ul>
+
+
+            <h3 class="menu_title09 ui-accordion-header ui-corner-top ui-corner-bottom">
+            <div class="menu_title_div">
+                <a href="#">wifi广告管理</a>
+            </div>
+        </h3>
+            <ul class="menu_title09 ui-accordion-content ui-corner-bottom">
+                <li id="wifi_ad_item_2"><a href="/outlet-manager-web/shopping_guide/slide_adv/add">商场导购主图广告</a>
+                </li>
+                <li id="wifi_ad_item_9"><a href="/outlet-manager-web/shopping_guide/item?type=9">推荐模块一</a>
+                </li>
+                <li id="wifi_ad_item_10"><a href="/outlet-manager-web/shopping_guide/item?type=10">推荐模块二</a>
+                </li>
+                <li id="wifi_ad_item_11"><a href="/outlet-manager-web/shopping_guide/item?type=11">推荐模块三</a>
+                </li>
+                <li id="wifi_ad_item_12"><a href="/outlet-manager-web/shopping_guide/item?type=12">推荐模块四</a>
+                </li>
+                <li id="wifi_ad_item_13" onclick="goToWifi()"><a target="_blank" href="/outlet-manager-web/shopping_guide/show_wifi/list">查看wifi商场首页</a>
+                </li>
+            </ul>
+
+        </div>
+
+        <!--header 此段注释内调用左栏内容 end-->
+    </div>
+    <div id="R_col">
+        <!--header 此段注释内调用右栏内容-->
+
+        <div id="wrap">
+            <div class="r_breadcrumb mgl12 mgr12">
+
+                <a href="/outlet-manager-web/">商家管理</a> &gt;管理总览
+            </div>
+            <div class="r_w">
+                <div class="awl_tize1">
+                    <span class="ys2">审核通过, 您可以发布店铺促销信息啦!</span>
+                </div>
+                <div class="mgt10">
+                    <div class="logobod">
+                        <div class="dfr dfl_title01 dfr_tt">
+
+                            <a href="/outlet-manager-web/outlet/info" class="on">完善基本资料</a>
+                        </div>
+                        <span class="dfl"> 
+                        
+                            
+                                <img class="tempImage" width="116" height="44" src="http://tmp.soulagou.com/33d170aaea4b6053c9dccd5045c922a0_soulagou_2.jpg" />
+                            
+                            
+                        
+                    </span>
+                        <span class="dfl mgl10 r2 txw1 mgt10">shop 0217</span>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <!-- 基本资料-->
+                <div>
+                    <div class="persent47 txlh10 mgl05 dfl">
+                        <p>商家账号：shop0217</p>
+                        <p>商户类型： 商户
+                        </p>
+                        <p>电子邮箱：shop0217@qq.com</p>
+                    </div>
+                    <div class="persent47 txlh10 mgr05 dfr">
+                        <p>入驻时间：2014-2-24</p>
+                        <p>所属商圈：四川 成都 金牛区 高笋塘驷马桥</p>
+                        <p>详细地址：成华街5号</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <!-- 基本资料 end-->
+
+            </div>
+        </div>
+
+        <!--header 此段注释内调用右栏内容 end-->
+    </div>
+
+    <input type="hidden" id="staticURL" value="http://localhost/static-resource" />
+    <input type="hidden" id="outletURL" value="http://localhost/outlet-manager-web" />
+    <input type="hidden" id="selfURL" value="http://localhost/outlet-manager-web" />
+    <input type="hidden" id="imageURL" value="http://tmp.soulagou.com" />
+</body>
+
+<script type="text/javascript">
+    jQ("#backHomeBtn").click(function() {
+        location.href = '/outlet-manager-web/';
+    });
+</script>
+
+<script type="text/javascript">
+    jQ("#accordion").togglepanels({});
+    jQ('#backHomeBtn').addClass('index_b_on');
+</script>
+
+</html>

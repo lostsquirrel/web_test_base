@@ -1,0 +1,181 @@
+@import url(../quote/global.css); @import url(../quote/grid.css);
+
+
+#wrap { background:#2c2c2c;}
+.content { padding-bottom:24px;}
+/*商场导购模块*/
+.co_k { margin:24px 8px; position:relative; }
+.co_k .l { width:18.6%;  margin-bottom:8px; float:left; }
+.c01 { background:#216caf;}.c02 { background:#418a06;}.c03 { background:#901414;}
+.co_k a, .co_k a:hover { color:#FFF;}
+.co_k .lic{overflow:hidden}
+.c01 .lic { background:url(../../../img/wap_wifi/co_k_bg01.png) -8px bottom no-repeat;}
+.c02 .lic { background:url(../../../img/wap_wifi/co_k_bg02.png) -8px bottom no-repeat;}
+.c03 .lic { background:url(../../../img/wap_wifi/co_k_bg03.png) -8px bottom no-repeat;}
+.lic .lin { background:url(../../../img/wap_wifi/index_l_bg.png) left top repeat;}
+.co_k .tt { margin:0 0 0 12px; float:left; color:#FFF;}
+.co_k .b {padding-bottom:7px; right:81.4%; display:block; bottom:0px;  /*position:absolute;*/ text-align:right; /*padding-top:800px; padding-left:500px; width:18%;*/ white-space:nowrap; }
+.co_k .r { width:81.4%; float:right; overflow:hidden; background:#2c2c2c;}
+.co_k .r .dy2col { width:49.9%; float:left; overflow:hidden;}
+.co_k .r .dy3col { width:33.3333%; float:left;}
+.co_k .r .dy1col { width:100%; float:left;}
+.co_k .r .in { margin-left:8px; margin-bottom:8px;}
+.co_k .r .in a { clear:both; display:block; color:#333;}
+.co_k .r .in a:hover { color:#333;}
+.co_k .r .dy3col .in { position:relative; overflow:hidden;}
+.co_k .r .dy1col .in { background:#FFF;}
+.co_k .r .dy1col .in .h4 { background:#d9d9d9;}
+.co_k .r .dy1col .in .h4 .lb { padding:0 13px; margin-right:9px; color:#FFF;}
+.co_k .r .dy1col .in .h4 .tid { overflow:hidden; display:block;}
+.co_k .r .dy1col .in .h4 .cc01 { background:#359015;}
+.co_k .r .dy1col .in .h4 .cc02 { background:#2b7bce;}
+.co_k .r .dy1col .in .h4 .cc03 { background:#ce7e2b;}
+.co_k .r .dy1col .in .dm { padding:14px;}
+.co_k .r .dy1col .end_time { padding-bottom:7px; padding-right:3%; text-align:right;}
+.co_k .r .last { margin-bottom:0px;}
+.co_k .r .in img  { width:100%;}
+.co_k .r .dy2col .t, .co_k .r .dy3col .t { padding-left:14px; font-size:22px; line-height:34px; }
+.co_k .r .dy2col .t {background:#FFF;}
+.co_k .r .dy3col .t { padding-left:8%; position:absolute; z-index:20; bottom:0; left:0; background:url(../../../img/wap_wifi/white_alpha80.png) 0 0 repeat; width:94%; }
+.co_k .r .dy3col .fd { padding:0 6px 0 14px; border-radius:14px 0 0 14px; box-shadow:-1px 0px 3px #333; position:absolute; background:#FFF; right:0; bottom:22%;}
+/*关于搜啦*/
+.c04{background:#ececec; padding:24px 0 0 0; margin:0;min-height:801px;}
+.abtl{ background:#fff; color:#e61456; padding:1% 2% 1% 2%}
+.p04{line-height:200%;}
+.abtl2{ background:#fff; padding:1% 2% 1% 2%}
+.abtl2 a{ color:#e61456}
+/*网址导航*/
+.site_nav { padding:24px 0;}
+.site_nav .dy { margin:0 0 24px 2.5%; float:left; width:30%;}
+.site_nav .dy .rele { position:relative;}
+.site_nav .dy .rele > a { display:block; clear:both;}
+.site_nav .dy .rele img { width:100%;}
+.site_nav .dy .rele .tri { width:47px; height:47px; position:absolute; right:0; top:0;}
+.site_nav .dy .rele .tri img { width:100%;}
+.site_nav .dy .site_name { padding-left:9px; background:#d9d9d9; color:#333;}
+/*应用下载*/
+.app_dl {}
+.app_dl .dy { margin-top:3px; padding:24px; background:#FFF;}
+.app_dl .dy .icon { width:120px; height:120px; margin-right:24px; float:left; }
+.app_dl .dy .icon img { width:100%;}
+.app_dl .dy .info { overflow:hidden;}
+.app_dl .dy .info .dl_btn { margin-top:24px; border:#cecece 1px solid; border-radius:9px; overflow:hidden; background:#f0f0f0; color:#5a5a5a;}
+.app_dl .dy .info .dl_btn input,.app_dl .dy .info .dl_btn a { padding:7px 24px;}
+
+.app_dl .dy .info .m_con { overflow:hidden;}
+.app_dl .dy .info .m_con { padding-right:14px;}
+.app_dl .dy .info .m_con .app_name { margin-bottom:14px; line-height:100%; }
+.app_dl .dy .info .m_con .app_intro { font-size:22px; max-height:66px; line-height:150%; overflow:hidden; color:#7c7c7c;}
+/*合作电话*/
+.hz {margin-top:24px; text-align:center; background:#FFF; }
+.hz a{ color:#e61456}
+
+
+
+
+
+
+
+
+
+/*640*/
+@media screen and (min-width: 640px) and (max-width: 719px) {
+.content { padding-bottom:20px;}
+.c04{min-height:712px;}
+/*商场导购模块*/
+.co_k { margin:20px 8px; }
+.co_k .tt { margin:0 0 0 10px;}
+.co_k .b {padding-bottom:6px;}
+.co_k .r .in { margin-left:8px; margin-bottom:8px;}
+.co_k .r .last { margin-bottom:0px;}
+.co_k .r .dy2col .t, .co_k .r .dy3col .t { padding-left:12px; font-size:20px; line-height:30px;}
+.co_k .r .dy3col .fd { padding:0 5px 0 12px; border-radius:12px 0 0 12px; box-shadow:-1px 0px 3px #333;}
+.co_k .r .dy1col .in .h4 .lb { padding:0 12px; margin-right:8px;}
+.co_k .r .dy1col .in .dm { padding:12px;}
+.co_k .r .dy1col .end_time { padding-bottom:6px;}
+/*网址导航*/
+.site_nav { padding:20px 0;}
+.site_nav .dy { margin:0 0 20px 2.5%;}
+.site_nav .dy .rele .tri { width:42px; height:42px;}
+.site_nav .dy .site_name { padding-left:8px;}
+/*应用下载*/
+.app_dl .dy { margin-top:3px; padding:20px;}
+.app_dl .dy .icon { width:106px; height:106px; margin-right:20px;}
+.app_dl .dy .info .dl_btn { margin-top:20px; border:#cecece 1px solid; border-radius:8px;}
+.app_dl .dy .info .dl_btn input,.app_dl .dy .info .dl_btn a { padding:6px 20px;}
+.app_dl .dy .info .m_con { padding-right:12px;}
+.app_dl .dy .info .m_con .app_name { margin-bottom:12px;}
+.app_dl .dy .info .m_con .app_intro { font-size:20px; max-height:60px;}
+/*合作电话*/
+.hz {margin-top:20px;}
+
+
+
+}
+/*480和540*/
+@media screen and (min-width: 480px) and (max-width: 639px) {
+.content { padding-bottom:16px;}
+.c04{min-height:534px;}
+/*商场导购模块*/
+.co_k { margin:16px 6px; }
+.co_k .tt { margin:0 0 0 8px;}
+.co_k .b {padding-bottom:5px;}
+.co_k .r .in { margin-left:6px; margin-bottom:6px;}
+.co_k .r .last { margin-bottom:0px;}
+.co_k .r .dy2col .t, .co_k .r .dy3col .t { padding-left:10px; font-size:15px; line-height:22px;}
+.co_k .r .dy3col .fd { padding:0 4px 0 10px; border-radius:10px 0 0 10px; box-shadow:-1px 0px 3px #333;}
+.co_k .r .dy1col .in .h4 .lb { padding:0 9px; margin-right:6px;}
+.co_k .r .dy1col .in .dm { padding:10px;}
+.co_k .r .dy1col .end_time { padding-bottom:5px;}
+/*网址导航*/
+.site_nav { padding:16px 0;}
+.site_nav .dy { margin:0 0 16px 2.5%;}
+.site_nav .dy .rele .tri { width:31px; height:31px;}
+.site_nav .dy .site_name { padding-left:6px;}
+/*应用下载*/
+.app_dl .dy { margin-top:2px; padding:16px;}
+.app_dl .dy .icon { width:80px; height:80px; margin-right:16px;}
+.app_dl .dy .info .dl_btn {  margin-top:16px; border:#cecece 1px solid; border-radius:6px;}
+.app_dl .dy .info .dl_btn input,.app_dl .dy .info .dl_btn a { padding:4px 16px;}
+.app_dl .dy .info .m_con { padding-right:9px;}
+.app_dl .dy .info .m_con .app_name { margin-bottom:9px;}
+.app_dl .dy .info .m_con .app_intro { font-size:14px; max-height:42px;}
+/*合作电话*/
+.hz {margin-top:16px;}
+
+
+
+}
+/*320*/
+@media screen and (max-width: 479px) {
+.content { padding-bottom:10px;}
+.c04{min-height:356px;}
+/*商场导购模块*/
+.co_k {margin:10px 4px 0; }
+.co_k .tt { margin:0 0 0 5px;}
+.co_k .b { padding-bottom:3px;}
+.co_k .r .in { margin-left:4px; margin-bottom:4px;}
+.co_k .r .last { margin-bottom:0px;}
+.co_k .r .dy2col .t, .co_k .r .dy3col .t { padding-left:6px; font-size:10px; line-height:16px;}
+.co_k .r .dy3col .fd { padding:0 3px 0 6px; border-radius:6px 0 0 6px; box-shadow:-1px 0px 2px #333;}
+.co_k .r .dy1col .in .h4 .lb { padding:0 6px; margin-right:4px;}
+.co_k .r .dy1col .in .dm { padding:6px;}
+.co_k .r .dy1col .end_time { padding-bottom:3px;}
+/*网址导航*/
+.site_nav { padding:10px 0;}
+.site_nav .dy { margin:0 0 10px 2.5%;}
+.site_nav .dy .rele .tri { width:21px; height:21px;}
+.site_nav .dy .site_name { padding-left:4px;}
+/*应用下载*/
+.app_dl .dy { margin-top:2px; padding:10px;}
+.app_dl .dy .icon { width:54px; height:54px; margin-right:10px;}
+.app_dl .dy .info .dl_btn { margin-top:10px; border:#cecece 1px solid; border-radius:4px;}
+.app_dl .dy .info .dl_btn input,.app_dl .dy .info .dl_btn a { padding:3px 10px;}
+.app_dl .dy .info .m_con { padding-right:6px;}
+.app_dl .dy .info .m_con .app_name { margin-bottom:6px;}
+.app_dl .dy .info .m_con .app_intro { font-size:10px; max-height:30px;}
+/*合作电话*/
+.hz {margin-top:10px;}
+
+
+}

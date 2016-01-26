@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>drag & drop</title>
+	<script src="../js/jquery-1.10.1.js" charset="utf-8"></script>
+  <style type="text/css">
+    div {
+      width: 300px;
+      height: 150px;
+      border: 1px solid #000000;
+    }
+		td {
+			border: 1px solid #000000;
+		}
+		span {
+			border: 1px solid blue;
+		}
+  </style>
+  <script>
+	$(function(){
+		console.log('jQuery ok!')
+	});
+
+    function allowDrop(ev) {
+      ev.preventDefault(); //元素默认不可以拽入, 所以需要禁用
+    }
+
+    function drag(ev) {
+      ev.dataTransfer.setData("Text", ev.target.id); //设置数据类型与值
+    }
+
+    function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("Text");
+      ev.target.appendChild(document.getElementById(data));
+    }
+		var c = {};
+
+	// $("#inventor tr").draggable({
+	//         helper: "clone",
+	//         start: function(event, ui) {
+	//             c.tr = this;
+	//             c.helper = ui.helper;
+	//         }
+	// });
+
+	//
+	// $("#invention tr").droppable({
+	//     drop: function(event, ui) {
+	//         var inventor = ui.draggable.text();
+	//         $(this).find("input").val(inventor);
+	//
+	//         $(c.tr).remove();
+	//         $(c.helper).remove();
+	//     }
+	// });
+  </script>
+</head>
+
+<body>
+  <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><span id="s1" draggable="true" ondragstart="drag(event)">aaaaa</span></div>
+  <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"><span id="s2" draggable="true" ondragstart="drag(event)">bbbbb</span></div>
+  <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"><span id="s3" draggable="true" ondragstart="drag(event)">cccccc</span></div>
+  <img id="drag1" src="../img/img_w3slogo.gif" width="250" draggable="true" ondragstart="drag(event)">
+
+	draggable="true" 表示元素可以被拖拽 ondragstart="drag(event)" 元素被拖出时触发 ev.preventDefault(); 元素默认不可以拽入, 所以需要禁用 ondrop="drop(event)" 有元素拽入时触发
+	<table id="inventor" >
+		<tr ondrop="drop(event)" ondragover="allowDrop(event)">
+			<div class="" draggable="true" ondragstart="drag(event)" >
+
+			<td>
+				a
+			</td>
+			<td>
+				b
+			</td>
+			</div>
+		</tr>
+		<tr ondrop="drop(event)" ondragover="allowDrop(event)">
+			<div class="" draggable="true" ondragstart="drag(event)"  >
+
+			<td>
+				c
+			</td>
+			<td>
+				d
+			</td>
+			</div>
+		</tr>
+	</table>
+</body>
+
+</html>

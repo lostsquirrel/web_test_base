@@ -1,0 +1,75 @@
+<html>
+<head>
+	<title>test</title>
+	<style type="text/css">
+	/*@import url(test.css); 使用link引入扩展性更强,可在文件中引入其它css文件,不需要再修改html页面
+	由上到下,由外到内,优先级由低到高*/
+	</style>
+	<link rel="stylesheet" type="text/css" href="test.css">
+	<script type="text/javascript">
+
+	var arr = [1,2,3,4,5];
+	console.debug(window);
+	// console.debug(window.history);
+	// console.debug(window.location);
+	//console.debug(arr);
+		function Person(name,age) {
+	    	this.name = name;
+	    	this.age = age;
+    	}
+    	var p = new Person("xx", 30);
+    	p.sex = "unknown";
+    	p.displayName = function displayName () {
+    		return this.name;
+    	}
+    	Person.prototype.say = function() {
+        	return "name: " + this.name + ", age: " + this.age;
+    	}
+    	// console.debug(p.age);
+    	// console.debug(p.hasOwnProperty("sex"));
+    	// console.debug(p.propertyIsEnumerable("age"));
+    	/*for (var property in p) {
+    		console.debug(property, p[property]);
+    	}*/
+	</script>
+</head>
+<body>
+<!-- <h1>一级标题</h1>
+<a name="top">Top<aa>
+	<div style="background-color: gray;">
+		div区域一,行区域标签,无特定含义,用于封装数据
+	</div>
+	<div class="grbg">
+		div区域二
+	</div>
+<h2>二级标题</h2>
+	<span style="background-color: blue;">
+		span区域一,用于封装数据
+		行级区域
+	</span>
+	<span id="d2">
+		span区域二
+		块级区域
+	</span>
+
+<h3>三级标题</h3>
+	<p style="background-color:#0066FF; color:#FF0000">段落一
+		P中不要嵌套div
+	</p>
+	<div class="grbg">
+		div<b>区域</b>二
+	</div>
+	<p class="grbg">
+		段落二
+	</p>
+	<a href="#" target="_blank" title="显示信息">超链接一个</a><br />
+	当超链接被点击后,会启动引擎所对应解析程序,查找指定主机<br />
+	先找本机hosts文件<br />
+	再去公网DNS服务器上查找<br />
+	<a href="mainto:xxx@xxx.com?suject=xxx&cc=qq@163.com"></a>
+	超链接的另一个作用:定位标记<br />
+	<a href="#top">返回顶部</a><br />
+	一个输入框<input type="text" /><br />
+	又一个框框<input type="text" /><br /> -->
+</body>
+</html>

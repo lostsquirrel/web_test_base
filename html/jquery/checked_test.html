@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title>Test select in firefox</title>
+	<link href="http://localhost:8080/static-resource/css/plugin/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="http://localhost:8080/static-resource/js/plugin/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="http://localhost:8080/static-resource/js/plugin/jquery-ui-1.9.2.custom.min.js"></script>
+</head>
+<body>
+	<input id="b" type="button" value="open"/>
+	<form>
+		<div>
+			<input type="radio" name="xx" value="a"/>
+			<input type="radio" name="xx" value="b"/>
+			<input type="radio" name="xx" value="c"/>
+			<input type="submit" />
+		</div>
+	</form>
+
+
+	<div id='xx'>
+		<select>
+			<option>aaa</option>
+			<option>bbb</option>
+			<option>ccc</option>
+			<option>ddd</option>
+			<option>eee</option>
+		</select>
+	</div>
+	<div class="clear"></div>
+	<script type="text/javascript">
+
+		function logx(x) {
+			console.log(x);
+		}
+		jQ('#b').click(function() {
+			logx('-------------');
+			logx(jQ("div :checked").val());
+		});
+	</script>
+</body>
+</html>

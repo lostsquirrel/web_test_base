@@ -1,0 +1,23 @@
+@import url(../quote/global.css); @import url(../quote/grid.css);
+
+
+.tbanner{ margin-top:15%}
+.tbanner img{ width:30%;}
+.tbb{margin-top:5%}
+.btn_pro{padding:1% 5%; background:#36C; color:#fff;} 
+/*640*/
+@media screen and (min-width: 640px) and (max-width: 719px) {
+
+
+
+}
+/*480和540*/
+@media screen and (min-width: 480px) and (max-width: 639px) {
+
+
+}
+/*320*/
+@media screen and (max-width: 479px) {
+
+
+}

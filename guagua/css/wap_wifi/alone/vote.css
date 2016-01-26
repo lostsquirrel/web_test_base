@@ -1,0 +1,61 @@
+a:hover{ color:#fff;}
+.vd1{width:100%}
+.vd1 img{width:100%}
+.vd2{ padding:20px;}
+.vd3 img{width:100%}
+.vd4{width:100%; position:absolute;}
+.next1{width:70%; line-height:3; background:#fff; border-radius:15px; display:block; margin:0 auto;}
+.vinfo{width:96%; margin:0 auto}
+.tit1{ padding-left:30px; background:url(../../../img/wap_wifi/vote/dot.png) no-repeat left center; }
+.tit2{ padding-left:30px; background:url(../../../img/wap_wifi/vote/dot3.png) no-repeat left top; }
+.celltab td{line-height:2.5}
+.celltab input{ width:60%; line-height:1.5; border-bottom:#666 2px solid; height:70%; font-size:80%;}
+.rdo_info input{width:auto; line-height:1.5; border:0; height:auto}
+.recode input{ width:30%; }
+.recode a{width:40%;height:70%; border-radius:10px; display:block; background:#390}
+.recode a.on{width:40%;height:70%; border-radius:10px; display:block; background:#999}
+.vd5{ background:#f2f2f2; padding:8% 0; margin-top:3%}
+.confrim{width:50%; line-height:3; background:#0c7aeb; border-radius:15px; display:block; margin:0 auto;}
+.next2{width:50%; line-height:3; background:#999; border-radius:15px; display:block; margin:0 auto;}
+.next2.on{width:50%; line-height:3; background:#0c7aeb; border-radius:15px; display:block; margin:0 auto;}
+
+.next3{width:50%; line-height:3; background:#999; border-radius:15px; display:block; margin:0 auto;}
+.next3.on{width:50%; line-height:3; background:#0c7aeb; border-radius:15px; display:block; margin:0 auto;}
+
+.noticev{border:#e61456 2px solid; padding:0 5%; background:#fff; width:60%; position:absolute; margin:-10%  15% 0 15%;}
+
+
+.qtlist{border-top:#f0f0f0 1px solid;}
+
+.lista{width:100%;  display:block; border-bottom:#f0f0f0 1px solid; background:url(../../../img/wap_wifi/vote/selecticon.png) no-repeat right center;}
+.lista:hover{color:#444;}
+.lista.on{width:100%;  display:block; border-bottom:#f0f0f0 1px solid; background:url(../../../img/wap_wifi/vote/selecticon_on.png) no-repeat right center; color:#178d0e; }
+
+.lista div{width:85%;padding:10px 3%;border-left:#fff 4px solid;}
+.lista:hover div ,.lista.on div{width:85%;padding:10px 3%;border-left:#178d0e 4px solid;}
+.advice1{width:96%; resize:none; }
+
+.vd7{ padding:8% 0; margin-top:3%}
+.next2{width:70%; line-height:3; background:#e61456; border-radius:15px; display:block; margin:0 auto;}
+
+/*640*/
+@media screen and (min-width: 640px) and (max-width: 719px) {
+.lista{background:url(../../../img/wap_wifi/vote/selecticon2.png) no-repeat right center; }
+.lista.on{background:url(../../../img/wap_wifi/vote/selecticon1_on.png) no-repeat right center; }
+.tit2{ padding-left:30px; background:url(../../../img/wap_wifi/vote/dot5.png) no-repeat left top; }
+}
+/*480和540*/
+@media screen and (min-width: 480px) and (max-width: 639px) {
+.lista{background:url(../../../img/wap_wifi/vote/selecticon3.png) no-repeat right center; }
+.lista.on{background:url(../../../img/wap_wifi/vote/selecticon2_on.png) no-repeat right center; }
+.tit2{ padding-left:30px; background:url(../../../img/wap_wifi/vote/dot4.png) no-repeat left top; }
+}
+/*320*/
+@media screen and (max-width: 479px) {
+.lista{background:url(../../../img/wap_wifi/vote/selecticon4.png) no-repeat right center; }
+.lista.on{background:url(../../../img/wap_wifi/vote/selecticon3_on.png) no-repeat right center; }
+.tit2{ padding-left:30px; background:url(../../../img/wap_wifi/vote/dot2.png) no-repeat left top; }
+}
+@media screen and (max-width: 319px) {
+.tit2{ padding-left:30px; background:url(../../../img/wap_wifi/vote/dot2.png) no-repeat left top; }
+}

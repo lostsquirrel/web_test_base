@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery start</title>
+</head>
+<script type="text/javascript" src="../../js/jquery-1.10.1.js"></script>
+
+<body>
+<div id="output"></div>
+<label></label>
+<p>sdfl<span>in span 1 in p</span>kj</p>
+<span>in span 2</span>
+<form>
+	<input name="inp1">
+	<input name="inp2">
+	<span>in span 3</span>
+	<input name="inp3">
+	<input name="inp4">
+	<span>in span 4</span>
+</form>
+<form>
+	<input name="inp11">
+	<input name="inp22">
+	<span>in span 3</span>
+	<input name="inp33">
+	<input name="inp44">
+	<span>in span 4</span>
+</form>
+	
+</body>
+<script type="text/javascript">
+
+$(document).ready(function() {
+	var output = $("#output");
+
+	/*	
+	console.debug($("label + input"))
+	console.debug($("label + input")[0])
+    output.append($("label + input").length)
+    */
+    // console.debug($("input ~ span"))
+    console.debug($('input:first'))
+    // console.debug($('input:eq(0)').attr('name'))
+    // console.debug($('input:gt(1)').attr('name'))
+});
+</script>
+
+</html>

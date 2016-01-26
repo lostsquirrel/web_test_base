@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Date</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+    var getStartOfWeek = function(date) {
+        if (!date) {
+            date = new Date();
+        }
+        var wk = date.getDay();
+        if (wk) {
+            date.setDate(date.getDate() - wk + 1);
+        } else {
+            date.setDate(date.getDate() - 6);
+        }
+        return date;
+    };
+
+    var getFinishOfWeek = function (date) {
+        if (!date) {
+            date = new Date();
+        }
+        var wk = date.getDay();
+        date.setDate(date.getDate() + 7 - wk);
+
+        return date;
+    };
+    var now = new Date();
+    var bd = document.getElementsByTagName("body").item(0);
+//    bd.appendChild(document.createTextNode(now));
+////    now.setDate(24 - 6)
+//    now.setDate(now.getDate() - now.getDay() + 1)
+//    var a = document.createTextNode(now)
+//
+//    bd.appendChild(a)
+////    now.setDate(24 + 7)
+//    now.setDate(now.getDate() + 7 - now.getDay())
+//    bd.appendChild(document.createTextNode(now));
+    bd.appendChild(document.createTextNode(now))
+    bd.appendChild(document.createTextNode(getStartOfWeek()))
+    bd.appendChild(document.createTextNode(getFinishOfWeek()))
+    bd.appendChild(document.createElement("br"))
+    now.setDate(24)
+    bd.appendChild(document.createTextNode(now))
+    bd.appendChild(document.createTextNode(getStartOfWeek(now)))
+    bd.appendChild(document.createTextNode(getFinishOfWeek(now)))
+    bd.appendChild(document.createElement("br"))
+    now.setDate(31)
+    bd.appendChild(document.createTextNode(now))
+    bd.appendChild(document.createTextNode(getStartOfWeek(now)))
+    bd.appendChild(document.createTextNode(getFinishOfWeek(now)))
+    bd.appendChild(document.createElement("br"))
+    now.setDate(1)
+    bd.appendChild(document.createTextNode(now))
+    bd.appendChild(document.createTextNode(getStartOfWeek(now)))
+    bd.appendChild(document.createTextNode(getFinishOfWeek(now)))
+
+</script>
+</html>

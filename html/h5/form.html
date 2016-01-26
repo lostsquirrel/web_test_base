@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>new Form elements</title>
+	</head>
+	<style type="text/css">
+		hr {
+			margin: 30px;
+		}
+	</style>
+	<body>
+		<form action="demo_form.asp" id="form1">
+		  First name: <input type="text" name="fname"><br>
+		  <input type="submit" value="Submit">
+		</form>
+
+		<hr />
+		<form id-"form0" action="demo_form.asp" novalidate>
+		  E-mail: <input type="email" name="user_email">
+		  First name:<input type="text" name="fname" autofocus>
+		  <input type="submit">
+		</form>
+		novalidate 提交表单时不验证数据(如果表单没有填入内容也会成功提交..)
+		autofocus 页面加载完成后自动聚集
+		<hr />
+		<form action="demo_form.asp" autocomplete="on">
+		  First name:<input type="text" name="fname"><br>
+		  Last name: <input type="text" name="lname"><br>
+		  E-mail: <input type="email" name="email" autocomplete="off"><br>
+		  E-mail: <input type="email" name="email" ><br>
+		  autocomplete 自动填充以前填过的数据,chrome默认是 on
+		  <input type="submit">
+		</form>
+		<hr />
+		<form>
+			<input list="browsers" />
+			<datalist id="browsers">
+			<option value="Internet Explorer" />
+			<option value="Firefox" />
+			<option value="Chrome" />
+			<option value="Opera" />
+			<option value="Safari" />
+			</datalist>
+			datalist 自填select
+		</form>
+		<hr />
+		<form action="demo_keygen.asp" method="get">
+			Username: <input type="text" name="usr_name">
+			Encryption: <keygen name="security">
+			<input type="submit">
+		</form>
+		<hr />
+		<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+		<input type="range" id="a" value="50">100 +
+		<input type="number" id="b" value="50">=
+		<output name="x" for="a b"></output>
+		</form>
+		Last name: <input type="text" name="lname" form="form0 form1">
+	</body>
+</html>
