@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Empty Display</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+    var bd = document.getElementsByTagName("body").item(0);
+    var udv = document.createElement("div");
+    udv.innerHTML='this is an undefined variable:';
+    var a = document.createElement('span');
+    var mm = {}
+    a.innerHTML = mm.xxoo;
+    udv.appendChild(a);
+
+    var duv = document.createElement("div");
+    duv.innerHTML='this is an variable with null value:';
+    var xx = null;
+    duv.appendChild(document.createTextNode(xx));
+
+    var duu = document.createElement("div");
+    duu.innerHTML='this is an variable without value:';
+    var oo;
+    duu.appendChild(document.createTextNode(oo));
+
+    bd.appendChild(udv);
+    bd.appendChild(document.createElement("br"))
+    bd.appendChild(duv);
+    bd.appendChild(document.createElement("br"))
+    bd.appendChild(duu)
+
+</script>
+</html>
