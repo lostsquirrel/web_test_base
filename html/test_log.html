@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>Test Log</title>
+	
+<style type="text/css">
+div#log {
+	height: 347px;
+	max-width: 100%;
+	border: solid 1px black;
+	overflow-y: auto;
+}
+</style>
+</head>
+<body>
+<div id="log"></div>
+	<script type="text/javascript">
+		var log = document.getElementById('log');
+		var i = 0;
+		var x = setInterval(function(){
+			var t = document.createTextNode('-----------'+i+'----------')
+			var p = document.createElement('p');
+			p.appendChild(t)
+			log.appendChild(p)
+			i++;
+			log.scrollTop = log.scrollHeight;
+			if (i > 100) clearInterval(x);
+		}, 0.5 * 1000);
+		console.log(log)
+	</script>
+</body>
+</html>
