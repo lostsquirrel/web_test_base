@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts Color</title>
+    <!-- 引入 echarts.js -->
+    <script src="/js/plugin/echarts.min.js"></script>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <button onclick="colorToAll()" style="background-color:#0066ff;">统一修改颜色</button>
+    <button onclick="colorByValue()">由数值显示颜色</button>
+    <div id="colorSample"></div>
+    <div id="colorSamplex"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: 'ECharts 入门示例'
+            },
+            tooltip: {},
+            legend: {
+                data:['销量']
+            },
+            xAxis: {
+                data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+            },
+            yAxis: {},
+            series: [{
+                name: '销量',
+                type: 'bar',
+                itemStyle: {
+                	normal: {}
+                },
+                data: [5, 20, 36, 10, 10, 20]
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+        
+        var colorToAll = function() {
+        	console.log(option)
+        	option.color = ['#36a6e8', '#1ad5e1', '#1ecb63', '#94cd1b', '#dbd41c', '#ef9200', '#ef5a00', '#ef2576', '#d012ec', '#6912ec', '#1e63ff'];
+        	console.log(option)
+        	myChart.setOption(option);
+        };
+        
+        
+        var colorSample = document.getElementById('colorSample');
+        
+        var cs = ['#c23531','#2f4554', '#61a0a8', '#d48265', '#91c7ae','#749f83',  '#ca8622', '#bda29a','#6e7074', '#546570', '#c4ccd3'];
+        for (var i = 0; i < cs.length; i++) {
+        	var tt = document.createTextNode(cs[i]);
+        	var bt = document.createElement('button');
+        	bt.setAttribute('style', 'background-color:'+cs[i]);
+        	bt.appendChild(tt);
+        	colorSample.appendChild(bt);
+        }
+        var blues = ['#e6e6ff', '#b3b3ff', '#8080ff', '#4d4dff', '#1a1aff', '#0000e6', '#0000b3', '#000080', '#00004d', '#00001a']
+        var colorSamplex = document.getElementById('colorSamplex');
+        for (var i = 0; i < blues.length; i++) {
+        	var tt = document.createTextNode(blues[i]);
+        	var bt = document.createElement('button');
+        	bt.setAttribute('style', 'background-color:'+blues[i]);
+        	bt.appendChild(tt);
+        	colorSamplex.appendChild(bt);
+        }
+        var colorByValue = function() {
+        	var data = option.series[0].data;
+       		console.log(data)
+       		var datax = data.slice();
+       		console.log(datax)
+       		datax = datax.sort(sortNumber);
+       		console.log(datax)
+        	option.series[0].itemStyle.normal.color = function(params) {
+        		var x = params.data;
+        		console.log(params)
+        		
+        		return blues[datax.indexOf(x)]
+        	};
+        	myChart.setOption(option);
+        }
+        function sortNumber(a,b) {
+            return a - b;
+        }
+    </script>
+</body>
+</html>

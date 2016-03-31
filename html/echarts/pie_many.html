@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ECharts</title>
+<!-- 引入 echarts.js -->
+<script src="/js/plugin/echarts.min.js"></script>
+</head>
+<body>
+	<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+	<div id="main" style="width: 600px; height: 400px;"></div>
+	<button onclick="changeColorSet()">修改颜色集</button>
+	<button onclick="randomData()">随机数</button>
+	<script type="text/javascript">
+		// 基于准备好的dom，初始化echarts实例
+		var myChart = echarts.init(document.getElementById('main'));
+
+		
+		// 指定图表的配置项和数据
+		option = {
+			title : {
+				text : '某站点用户访问来源',
+				subtext : '纯属虚构',
+				x : 'center'
+			},
+			tooltip : {
+				trigger : 'item',
+				formatter : "{a} <br/>{b} : {c} ({d}%)"
+			},
+			legend : {
+				orient : 'vertical',
+				left : 'left',
+				data : [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 
+				         'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' ]
+			},
+			series : [ {
+				name : '访问来源',
+				type : 'pie',
+				radius : '55%',
+				center : [ '50%', '60%' ],
+				data : [ ],
+				itemStyle : {
+					emphasis : {
+						shadowBlur : 10,
+						shadowOffsetX : 0,
+						shadowColor : 'rgba(0, 0, 0, 0.5)'
+					}
+				}
+			} ]
+		};
+		// 使用刚指定的配置项和数据显示图表。
+		var names = option.legend.data;
+		var data = option.series[0].data;
+		for (var i = 0; i < names.length; i++) {
+			data.push({name: names[i], value: i + 10})
+		}
+		myChart.setOption(option);
+
+		var changeColorSet = function() {
+			option.color = ['#36a6e8', '#1ad5e1', '#1ecb63', '#94cd1b', '#dbd41c', '#ef9200', '#ef5a00', '#ef2576', '#d012ec', '#6912ec', '#1e63ff'];
+			myChart.setOption(option);
+		}
+		
+		var randomData = function(){
+			var names = option.legend.data;
+			var data = option.series[0].data;
+			option.series[0].data = [];
+			for (var i = 0; i < names.length; i++) {
+				option.series[0].data.push({name: names[i], value: i + Math.random().toFixed(3) * 1000})
+			}
+			myChart.setOption(option);
+		}
+		
+	</script>
+</body>
+</html>
