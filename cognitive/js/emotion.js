@@ -35,7 +35,7 @@ $(document).ready(function() {
                     // console.log(item)
                     ctx.beginPath();
                     ctx.rect(faceRectangle.left, faceRectangle.top, faceRectangle.width, faceRectangle.height);
-                    ctx.lineWidth = 7;
+                    ctx.lineWidth = 2;
                     ctx.strokeStyle = 'red';
                     ctx.stroke();
                 });
