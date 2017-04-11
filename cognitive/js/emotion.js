@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     var api = "/api/cognitive"
-
+    var sks = ["anger", "contempt", "disgust", "fear", "happiness", "neutral", "sadness", "surprise"];
     $('button').click(function(){
         $('#msg').hide();
         var ti = $('#url').val();
@@ -17,6 +17,11 @@ $(document).ready(function() {
                     // console.log($(this))
                 });
 
+            // 如果图片宽度大于 680 等比缩放至 680
+            if (pic_real_width > 680) {
+                pic_real_width = 680;
+                pic_real_height = pic_real_height / (pic_real_width / 680)
+            }
             // console.log(pic_real_width)
             $.post(url, {url: ti}, function(data){
 
@@ -24,13 +29,26 @@ $(document).ready(function() {
                 var ctx = c.getContext("2d");
 
 
-                $('#imgDisplay').attr("width", pic_real_width + 20)
-                $('#imgDisplay').attr("height", pic_real_height + 20)
+                $('#imgDisplay').attr("width", pic_real_width)
+                $('#imgDisplay').attr("height", pic_real_height)
                 ctx.drawImage(img, 10, 10);
 
                 var mqs = '';
+                var scores = '';
                 $(data).each(function(k, item) {
-                    mqs += '<marquee>'+item.result+'</marquee>';
+                    mqs += '<p>'+item.result+'</p>';
+                    scores += '<div class="row">';
+                    $(sks).each(function(k, v){
+                        scores += '<div class="progress">';
+                        score = item.scores[v] * 100
+                        scores += '<div class="progress-bar" role="progressbar" aria-valuenow="'+score+'" aria-valuemin="0" aria-valuemax="100" style="width:'+score+'%">'
+                        scores += v + '&nbsp;&nbsp' + score + '%'
+                        scores += '</div>'
+                        scores += '</div>'
+
+                        scores +='<div class="w-100"></div>';
+                    });
+                    scores += '</div>'
                     var faceRectangle = item.faceRectangle;
                     // console.log(item)
                     ctx.beginPath();
@@ -40,6 +58,7 @@ $(document).ready(function() {
                     ctx.stroke();
                 });
                 $('div.mqs').html(mqs)
+                $('#scores_grid').html(scores)
                 //   context.fillStyle = 'red';
                 //   context.fill();
 
