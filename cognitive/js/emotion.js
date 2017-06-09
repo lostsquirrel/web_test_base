@@ -3,31 +3,15 @@ var api = "/api/cognitive";
 var sks = ["anger", "contempt", "disgust", "fear", "happiness", "neutral", "sadness", "surprise"];
 $(document).ready(function () {
 
-    $('#url').on('change', function () {
-        $('#msg').hide();
-        var formData = new FormData($('form')[0]);
-        var ti = $('#url').val();
-        if (!ti) {
-            $('#msg').html('请填写图片地址或上传一张照片').show();
-        } else {
-            var url = api + "/pic";
-
-            disPlayImage(ti, function (pic_real_width, pic_real_height) {
-                submitForm(formData, url, function (data) {
-                    showResult(data, pic_real_width, pic_real_height)
-                });
-            })
-        }
-
-    });
+    $('#url').on('change blur', doCognitive);
     $('#file').on('change', function () {
         $('#msg').hide();
         var formData = new FormData($('form')[0]);
         var url = api + "/upload/";
         submitForm(formData, url, function (data) {
             var url = data.url;
-            $('#url').val(url);
-            $('#imgSource').attr('src', data.url);
+            $('#url').val(url).trigger('change');
+            // $('#imgSource').attr('src', data.url);
 
         });
     });
@@ -49,6 +33,23 @@ function submitForm(formData, url, callback) {
             console.log(data);
         }
     });
+}
+
+function doCognitive() {
+    $('#msg').hide();
+    var formData = new FormData($('form')[0]);
+    var ti = $('#url').val();
+    if (!ti) {
+        $('#msg').html('请填写图片地址或上传一张照片').show();
+    } else {
+        var url = api + "/pic";
+        disPlayImage(ti, function (pic_real_width, pic_real_height) {
+            submitForm(formData, url, function (data) {
+                showResult(data, pic_real_width, pic_real_height)
+            });
+        })
+    }
+
 }
 
 function disPlayImage(imageUrl, callback) {
