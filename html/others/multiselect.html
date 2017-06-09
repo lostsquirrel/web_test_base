@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>multi select</title>
+	<script type="text/javascript" src="http://tmp2.static.soulagou.com/js/plugin/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="http://tmp2.static.soulagou.com/js/base/jquery-custom-base.js"></script>
+	
+	<script type="text/javascript" src="http://tmp2.static.soulagou.com/js/plugin/jquery-ui-1.9.2.custom.min.js"></script>
+</head>
+<body>
+<select id="example" name="example" multiple="multiple">
+<option value="1">Option 1</option>
+<option value="2">Option 2</option>
+<option value="3">Option 3</option>
+<option value="4">Option 4</option>
+<option value="5">Option 5</option>
+</select>
+</body>
+<script type="text/javascript">
+jQ("select").multiselect({
+   selectedText: "# of # selected"
+});
+	jQ(document).ready(function(){
+		console.log("------------------")
+		jQ("#example").multiselect();
+	});
+</script>
+</html>

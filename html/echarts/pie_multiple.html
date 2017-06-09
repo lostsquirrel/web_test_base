@@ -8,7 +8,7 @@
 </head>
 <body>
 	<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-	<div id="main" style="width: 600px; height: 400px;"></div>
+	<div id="main" style="width: 1200px; height: 400px;"></div>
 	<button onclick="changeColorSet()">修改颜色集</button>
 	<button onclick="resetColorSet()">重置颜色集</button>
 	<script type="text/javascript">
@@ -31,12 +31,15 @@
 				orient : 'vertical',
 				left : 'left',
 				data : [ '直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎' ],
+				formatter: function() {
+					console.log(arguments);
+				}
 			},
 			series : [ {
 				name : '访问来源',
 				type : 'pie',
 				radius : '55%',
-				center : [ '50%', '60%' ],
+				center : [ '25%', '60%' ],
 				data : [ {
 					value : 335,
 					name : '直接访问'
@@ -51,6 +54,35 @@
 					name : '视频广告'
 				}, {
 					value : 1548,
+					name : '搜索引擎'
+				} ],
+				itemStyle : {
+					emphasis : {
+						shadowBlur : 10,
+						shadowOffsetX : 0,
+						shadowColor : 'rgba(0, 0, 0, 0.5)'
+					}
+				}
+			},
+			{
+				name : '访问来源z',
+				type : 'pie',
+				radius : '55%',
+				center : [ '80%', '60%' ],
+				data : [ {
+					value : 3350,
+					name : '直接访问'
+				}, {
+					value : 3100,
+					name : '邮件营销'
+				}, {
+					value : 2340,
+					name : '联盟广告'
+				}, {
+					value : 1350,
+					name : '视频广告'
+				}, {
+					value : 15480,
 					name : '搜索引擎'
 				} ],
 				itemStyle : {

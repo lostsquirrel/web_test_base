@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array Sort</title>
+	<style type="text/css">
+	li {
+		width: 400px;
+		height: 300px;
+		padding: 20px 0px 20px 50px;
+		background-color: yellow;
+		border: solid blue 1px;
+	}
+	#preview img {
+		width: 100px;
+
+
+	}
+	textarea {
+   resize: none;
+	}
+	</style>
+
+</head>
+<body>
+</body>
+	<script type="text/javascript">
+	function sh(a, b) {
+		return a - b;
+	}
+	document.getElementsByTagName('body').innerHTML = JSON.stringify([1, 2, 3, 5, 4,6].sort(sh))
+	console.log(JSON.stringify([1, 2, 3, 5, 4,6].sort(sh)))
+	</script>
+</html>
