@@ -1,0 +1,15 @@
+table {
+    /*border: #0f0f0f solid 1px;*/
+    width: 500px;
+    font-family: "微软雅黑";
+    /*font-family: "ariel";*/
+}
+
+th {
+    height: 250px;
+    /*border: blue solid 1px;*/
+}
+
+h1, h2 {
+    font-weight: normal;
+}
