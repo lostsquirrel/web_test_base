@@ -7,9 +7,9 @@ body {
 #header {
     /*height: 25%;*/
     max-width: 1080px;
-    min-width: 768px;
+    min-width: 300px;
     max-height: fit-content;
-    min-height: 300px;
+    min-height: 200px;
     /*width: 100%;*/
     /*height: 300px;*/
     /*background-color: #0c7aeb;*/
