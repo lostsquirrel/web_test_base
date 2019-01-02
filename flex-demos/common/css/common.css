@@ -18,6 +18,14 @@
     /*border-left: black solid 1px;*/
 }
 
+.item-w50 {
+    width: 50px;
+}
+
+.item-w200 {
+    width: 200px;
+}
 .height-limited {
     height: 500px;
 }
+
