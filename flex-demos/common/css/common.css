@@ -8,16 +8,23 @@
 }
 
 .item {
-    height: 100px;
+    /*height: 100px;*/
     width: 80px;
     background-color: coral;
     margin: 10px;
-    font-size: xx-large;
+    /*font-size: xx-large;*/
     align-content: center;
     /*font-size-adjust: initial;*/
     /*border-left: black solid 1px;*/
 }
 
+.font-xxl {
+    font-size: xx-large;
+}
+
+.font-xxs {
+    font-size: xx-small;
+}
 .item-w50 {
     width: 50px;
 }
@@ -25,6 +32,24 @@
 .item-w200 {
     width: 200px;
 }
+
+.item-h50 {
+    height: 50px;
+}
+
+.item-h100 {
+    height: 100px;
+}
+
+.item-h150 {
+    height: 150px;
+}
+
+.item-h200 {
+    height: 200px;
+}
+
+
 .height-limited {
     height: 500px;
 }
