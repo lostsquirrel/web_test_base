@@ -1,15 +1,18 @@
 
-.box{
+.box {
     display: flex;
-    width: 500px;
     border: blue solid 3px;
     padding: 10px;
     margin-bottom: 150px;
 }
 
+.box-width-500 {
+    width: 500px;
+}
+
 .item {
     /*height: 100px;*/
-    width: 80px;
+    /*width: 80px;*/
     background-color: coral;
     margin: 10px;
     /*font-size: xx-large;*/
@@ -31,6 +34,10 @@
 
 .item-w200 {
     width: 200px;
+}
+
+.item-w500 {
+    width: 500px;
 }
 
 .item-h50 {
