@@ -14,20 +14,18 @@
 }
 
 .item {
-    /*height: 100px;*/
-    /*width: 80px;*/
     background-color: coral;
     margin: 10px;
-    /*font-size: xx-large;*/
     align-content: center;
-    /*font-size-adjust: initial;*/
-    /*border-left: black solid 1px;*/
 }
 
 .font-xxl {
     font-size: xx-large;
 }
 
+.font-s {
+    font-size: small;
+}
 .font-xxs {
     font-size: xx-small;
 }
