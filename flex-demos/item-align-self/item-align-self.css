@@ -1,0 +1,16 @@
+.item-align-self-flex-start {
+    align-self: flex-start;
+}
+.item-align-self-flex-end {
+    align-self: flex-end;
+}
+.item-align-self-center {
+    align-self: center;
+}
+.item-align-self-baseline {
+    align-self: baseline;
+}
+.item-align-self-stretch {
+    align-self: stretch;
+}
+

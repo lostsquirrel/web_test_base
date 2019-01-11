@@ -9,6 +9,9 @@
 .box-width-500 {
     width: 500px;
 }
+.box-height-300 {
+    height: 300px;
+}
 
 .item {
     /*height: 100px;*/
@@ -57,7 +60,7 @@
 }
 
 
-.height-limited {
+.box-height-500 {
     height: 500px;
 }
 
