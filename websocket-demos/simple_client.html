@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket demo</title>
+</head>
+<body>
+<input type="text" id="cmd" />
+<button onclick="sendCommand();">执行</button>
+<script>
+    const ws = new WebSocket("ws://127.0.0.1:5678/"),
+        messages = document.createElement('ul');
+    
+    ws.onmessage = function (event) {
+        var messages = document.getElementsByTagName('ul')[0],
+            message = document.createElement('li'),
+            content = document.createTextNode(event.data);
+        message.appendChild(content);
+        messages.appendChild(message);
+    };
+    document.body.appendChild(messages);
+    
+    function sendCommand() {
+        const cmd = document.getElementById('cmd').value
+        console.log(document.getElementById('cmd'))
+        console.log(cmd)
+        if (cmd) {
+            ws.send(cmd)
+        }
+    }
+</script>
+</body>
+</html>
