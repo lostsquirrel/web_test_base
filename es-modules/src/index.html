@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>°C to °F</title>
+</head>
+
+<body>
+<main>
+    <h1>Temperature unit conversion</h1>
+    <form>
+        <label for="celsius">°C°C&#x2103</label>
+        <input type="number" id="celsius" name="celsius">
+        <output data-unit="fahrenheit"></output>
+    </form>
+
+    <form>
+        <label for="fahrenheit">°F&#x2109</label>
+        <input type="number" id="fahrenheit" name="fahrenheit">
+        <output data-unit="celsius"></output>
+    </form>
+</main>
+
+<script type="module">
+    // import functions from .mjs
+    import { cToF, fToC } from "./convert-temp-units.mjs";
+
+    const asFahrenheit = document.querySelector("*[data-unit='fahrenheit']");
+    const asCelsius = document.querySelector("*[data-unit='celsius']");
+
+    celsius.addEventListener("input", (e) => {
+        const { value } = e.target;
+        asFahrenheit.textContent = cToF(value);
+    });
+
+    fahrenheit.addEventListener("input", (e) => {
+        const { value } = e.target;
+        asCelsius.textContent = fToC(value);
+    });
+</script>
+</body>
+</html>
