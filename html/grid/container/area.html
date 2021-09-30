@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>area</title>
+    <link rel="stylesheet" href="/css/grid.css">
     <style>
         .item-a {
             grid-area: header;
@@ -23,7 +24,7 @@
         .container {
             display: grid;
             grid-template-columns: 500px 500px 500px 500px;
-            grid-template-rows: auto;
+            grid-template-rows: repeat(3, 100px);
             grid-template-areas:
     "header header header header"
     "main main . sidebar"
