@@ -45,7 +45,7 @@ px = p.join('/')
     //   
     // document.getElementById("index").innerHTML = this.responseText;
     }
-  xhttp.open("GET", "/meta.json", true);
+  xhttp.open("GET", "/meta.json?_=" + new Date(), true);
   xhttp.send();
 }
 
