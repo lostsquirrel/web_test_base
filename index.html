@@ -1,21 +1,76 @@
 <!DOCTYPE html>
-
 <html lang="en">
-<head>
-    <title>all test and notes for html/css/js</title>
-</head>
-<body>
-<h1>Index</h1>
-<ul>
-    <li><a href="/html/bootstrap/">bootstrap</a></li>
-    <li><a href="/html/codecademy/">codecademy</a></li>
-    <li><a href="/html/css/">css</a></li>
-    <li><a href="/html/echarts/">echarts</a></li>
-    <li><a href="/html/h5/">HTML 5</a></li>
-    <li><a href="/html/jquery/">jQuery</a></li>
-    <li><a href="/html/grid/">Grid</a></li>
-    <li><a href="/html/others/">Others</a></li>
-</ul>
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Index</title>
+    <style type="text/css">
+        a {
+            display: block;
+            margin-left: 25%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="index"></div>
 </body>
+<script>
+    const container = document.getElementById("index")
+    function stripHost(url) {
+        start = url.indexOf('/', 8);
+        return url.substr(start + 1)
+    }
+    path = stripHost(window.location.href)
+    console.log(path)
+    if (path !== "") {
+        segms = path.split('/')
+        p = segms.slice(0, -1)
+        px = p.join('/')
+    }
+    
+
+    function loadDoc() {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function () {
+            const data = JSON.parse(this.responseText);
+            let current = []
+            if (path !== "") {
+                console.log(path)
+                current = data["./" + px]
+                
+            } else {
+                current = Object.keys(data)
+            }
+            
+
+            current.sort()
+            current.reverse()
+            current.forEach((e) => {
+                console.log(e)
+                
+                e = e.substr(1)
+                console.log(e)
+                const a = document.createElement("a")
+                a.setAttribute("href", e)
+                a.innerText = e
+                container.appendChild(a);
+            });
+
+            //   
+            // document.getElementById("index").innerHTML = this.responseText;
+        }
+        xhttp.open("GET", "/meta.json?_=" + new Date(), true);
+        xhttp.send();
+    }
+
+    loadDoc();
+
+
+    // console.log(px)
+</script>
+
 </html>

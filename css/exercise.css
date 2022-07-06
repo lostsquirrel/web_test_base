@@ -1,0 +1,204 @@
+
+
+
+strong {
+    display: block;
+}
+li {
+    display: inline;
+}
+h1 {
+    display: none;
+}
+
+h1 {
+    visibility: hidden;
+}
+
+th {
+    background-color: lightblue;
+}
+
+th {
+    padding: 15px;
+}
+
+td {
+    text-align: right;
+}
+table {
+    width: 100%;
+}
+
+table, th, td {
+    border: 2px solid green;
+}
+table {
+    border-collapse: collapse;
+}
+ul {
+    list-style: none;
+}
+
+
+ul {
+    list-style: circle inside url("img_marker.png") ;
+}
+
+ul {
+    list-style: url("sqpurple.gif");
+}
+
+ul {
+    list-style: square;
+}
+ol {
+    list-style: upper-roman;
+}
+a {
+    color: red;
+    text-decoration: underline;
+    background-color: yellow;
+}
+a:visited {
+    color: blue;
+    text-decoration: none;
+}
+a {
+    color: green;
+}
+
+p {
+    font: italic 20px Verdana;
+}
+
+
+p {
+    font-weight: bold;
+}
+
+body {
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+p {
+    font-style: italic;
+}
+body {
+    font-family: "Courier New";
+}
+h1 {
+    font-family: Verdana;
+}
+p {
+    text-indent: 20px;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+p {
+    text-transform: capitalize;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    text-align-all: center;
+}
+
+body {
+    color: red;
+}
+h1 {
+    color: blue;
+}
+
+p {
+    outline: red dotted 10px;
+}
+
+p {
+    outline-style: solid;
+    outline-width: 5px;
+    outline-color: green;
+}
+
+div {
+    width: 200px;
+    padding: 25px;
+    border: 25px solid navy;
+    margin: 25px;
+}
+
+h1 {
+    height: 100px;
+    width: 50%;
+}
+p {
+    padding: 25px 50px;
+}
+
+p {
+    padding: 50px;
+}
+p {
+    padding-top: 30px;
+}
+h1 {
+    margin: auto;
+}
+h1 {
+    margin: 50px 25px;
+}
+h1 {
+
+    margin-left: 20px;
+
+}
+p {
+    border: 10px solid green;
+}
+p {
+    border-color: red;
+    border-top-color: blue;
+}
+
+p {
+    border: 4px dotted blue;
+}
+
+body {
+    background: url('img_tree.png') no-repeat right top;;
+}
+
+
+body {
+    background-image: url("gradient_bg_vertical.png");
+    background-repeat: repeat-y;
+    background-position: top right;
+}
+
+body {
+    background-color: linen;
+}
+h1 {
+    background-color: lightblue;
+}
+
+
+p, h1 {
+    color: red;
+}
+.colortext {
+    color: red;
+}
+#para1 {
+    color: red;
+}
