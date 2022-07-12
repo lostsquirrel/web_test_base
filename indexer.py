@@ -1,7 +1,7 @@
 import os
 import json
 
-hide = (".git", ".gitignore", ".vscode",
+hide = (".git", ".gitignore", ".vscode", ".idea"
         "Dockerfile", "favicon.iso", "indexer.py")
 
 
