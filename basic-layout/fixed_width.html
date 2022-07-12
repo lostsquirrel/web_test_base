@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design page layout using CSS</title>
+</head>
+<style>
+    /* ------------------------------
+PAGE STRUCTURE
+------------------------------ */
+
+    /*
+#container has an absolute width (780 pixel)
+The width of inner elements is set to auto,
+in this way all inner elements have the same
+width of the element which contains them
+*/
+
+    #container {
+        width: 780px;
+        margin: 0 auto;
+    }
+
+    #topbar {
+        width: auto;
+        display: block;
+        height: 80px;
+    }
+
+    #navbar {
+        width: auto;
+        display: block;
+        height: 24px;
+    }
+
+    #navbar a {
+        height: 28px;
+        line-height: 28px;
+        padding: 0 8px;
+        display: inline;
+    }
+
+    #main {
+        width: auto;
+        display: block;
+    }
+
+    #column_left {
+        width: 560px;
+        margin-right: 20px;
+        float: left;
+    }
+
+    #column_right {
+        width: 200px;
+        float: left;
+    }
+
+    /*
+div.spacer, solve an issue with #container height
+in css 2 column layout.
+*/
+
+    div.spacer {
+        clear: both;
+        height: 10px;
+        display: block;
+    }
+
+    #footer {
+        width: auto;
+        display: block;
+        height: 24px;
+    }
+</style>
+
+<body>
+    <div id="container">
+        <div id="topbar">
+            <h1>Document Heading</h1>
+        </div>
+        <div id="navbar">
+            <a href="#">Option 1</a>
+            <a href="#">Option 2</a>
+        </div>
+        <div id="main">
+            <div id="column_left">
+
+                <h2>Column 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</p>
+            </div>
+            <div id="column_right">
+                <h2>Column 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</p>
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="spaceer"></div>
+        <div id="footer">
+            <p>Footer</p>
+        </div>
+    </div>
+  
+    
+</body>
+
+</html>

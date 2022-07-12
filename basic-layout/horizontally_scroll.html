@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontally Scroll</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-size: 62.5%;
+        font-family: 'Lucida Grande', Helvetica, sans-serif;
+        background: #121212;
+        color: #999;
+        padding: 20px;
+    }
+
+    tr {
+        vertical-align: top;
+    }
+
+    .post {
+        width: 500px;
+    }
+
+    p {
+        font-size: 1.2em;
+        margin: 0 0 15px 0;
+    }
+
+    h1 {
+        font-family: Sans-serif;
+        font-size: 4.0em;
+        letter-spacing: -1px;
+        color: #ccc;
+    }
+
+    h2 {
+        font-family: Sans-Serif;
+        font-size: 3.0em;
+        letter-spacing: -1px;
+        color: #ccc;
+    }
+</style>
+
+<body>
+    <table cellspacing="50">
+        <div id="page-wrap">
+
+        </div>
+    </table>
+</body>
+<script>
+    const page = document.getElementById("page-wrap")
+
+    const data = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    data.forEach((e) => {
+        const wrapper = document.createElement("td")
+        page.appendChild(wrapper)
+        const post = document.createElement('div');
+        wrapper.appendChild(post)
+        post.classList.add('post')
+        
+
+        post.insertAdjacentHTML('beforeend', `<h2>${e}</h2>`)
+        post.insertAdjacentHTML('beforeend', '<p>By <a href="http://css-tricks.com"><strong>CSS</strong>-Tricks</a></p>')
+        let content = ""
+        for (i = 0; i < 5000; i++) {
+            if (Math.random() >= 0.8) {
+                content += ' '
+            } else {
+                content += e
+            }
+        }
+        post.insertAdjacentHTML('beforeend', `<p>${content}</p>`)
+
+    })
+</script>
+
+</html>

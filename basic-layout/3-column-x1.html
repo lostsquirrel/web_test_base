@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three column fixed layout structure using CSS</title>
+</head>
+<style>
+    /* ------------------------------
+HTML Redefine Tags
+------------------------------ */
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        margin: 20px;
+        padding: 0;
+    }
+
+    input,
+    form,
+    textarea h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 14px;
+        color: #999999;
+    }
+
+    h3 {
+        font-size: 13px;
+        border-bottom: solid 1px #DEDEDE;
+        padding: 4px 0;
+        margin-bottom: 10px;
+    }
+
+    a:link,
+    a:visited {
+        color: #0033CC;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    /* ------------------------------
+PAGE STRUCTURE
+------------------------------ */
+
+    /* #container has an absolute width (780 pixel) */
+
+    #container {
+        width: 780px;
+        margin: 0 auto;
+    }
+
+    #topbar {
+        width: auto;
+        display: block;
+        height: 60px;
+    }
+
+    #navbar {
+        width: auto;
+        display: block;
+        height: 28px;
+    }
+
+    #navbar a {
+        height: 28px;
+        line-height: 28px;
+        padding: 0 8px;
+        display: inline;
+    }
+
+    #main {
+        width: auto;
+        display: block;
+        padding: 10px 0;
+    }
+
+    #column_left {
+        width: 460px;
+        margin-right: 20px;
+        float: left;
+    }
+
+    #column_right {
+        width: 160px;
+        margin-right: 20px;
+        float: left;
+    }
+
+    #column_right_adsense {
+        width: 120px;
+        float: left;
+    }
+
+    div.spacer {
+        clear: both;
+        height: 10px;
+        display: block;
+    }
+
+    #footer {
+        width: auto;
+        display: block;
+        padding: 10px 0;
+        font-size: 11px;
+        color: #666666;
+    }
+
+    /* ------------------------------
+CUSTOM CLASSES
+------------------------------ */
+
+    /* Add here your custom classes ... */
+</style>
+
+<body>
+    <div id="container">
+        <div id="topbar">Top Bar/Logo Layer</div>
+        <div id="navbar">
+            <a href="index.html?home">Home</a>
+            <a href="index.html?about">About</a>
+            <a href="mailto:myemailaddres@email.com">Contact me</a>
+        </div>
+        <div id="main">
+            <div id="column_left">
+                <h1>Post Title</h1>
+                <h2>12 january 2008</h2>
+                <p>Add your text here</p>
+                <p>column left</p>
+            </div>
+            <div id="column_right">
+                <h3>Categories</h3>
+                Right Content to add Categories, web 2 widget (twitter, mybloglog recent readers...)
+                <p>column right</p>
+            </div>
+            <div id="column_right_adsense">
+                <h3>AdSense</h3>
+                Adsense 120 X 600
+                <p>colum right adsense</p>
+            </div>
+            <!-- Don't remove spacer div. Solve an issue about container height -->
+            <div class="spacer"></div>
+        </div>
+        <div id="footer">© 2008 Information about your site</div>
+    </div>
+
+</body>
+
+</html>
