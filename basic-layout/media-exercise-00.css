@@ -1,0 +1,32 @@
+@media screen and (min-width: 768px) {
+    /* body {
+        display: flex;
+        flex-direction: column;
+    } */
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header>nav {
+        display: flex;
+        /* align-items: center; */
+    }
+    header>nav>ul {
+        display: flex;
+        align-self: center;
+    }
+    main {
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+    }
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+    .sidebar {
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+}
