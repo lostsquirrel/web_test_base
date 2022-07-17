@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split Navigation</title>
+</head>
+<style>
+    .main-nav {
+        display: flex;
+        /* min-width: 100%; */
+        /* justify-content: start; */
+    }
+    li {
+        list-style: none;
+        font-size: 2em;
+        margin-left: 50px;
+        
+        /* align-self: right; */
+    }
+    .push {
+        margin-left: auto;
+        margin-right: 40px;
+        /* align-self: right; */
+    }
+</style>
+<body>
+    <nav>
+        <ul class="main-nav">
+            <li><a href="">About</a></li>
+            <li><a href="">Products</a></li>
+            <li><a href="">Our Team</a></li>
+            <li class="push"><a href="">Contact</a></li>
+    </ul>
+    </nav>
+</body>
+</html>
